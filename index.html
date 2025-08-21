@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play KTH Library Challenge beta.</tw-noscript></noscript></tw-story>
-<tw-storydata name="KTH Library Challenge beta" startnode="1" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="AE73E09F-4F17-44A1-87CB-4DEF611C5B43" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar
+<tw-storydata name="KTH Library Challenge beta" startnode="4" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="AE73E09F-4F17-44A1-87CB-4DEF611C5B43" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar
 {
 	display: none;
 }
@@ -29,7 +29,65 @@ a:link {
 
 a:link {
   font-weight: bold;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="1" tags="" position="525,25" size="100,100">&#39;&#39;Välkommen till KTH Library Challenge!&#39;&#39;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="10a" tags="" position="500,2350" size="100,100">|=
+&#39;&#39;Felaktiga svar&#39;&#39;
+(print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
+
+  =|
+ [&#39;&#39;Använda ledtrådar&#39;&#39;
+(print: &#39;&lt;progress value=&quot;&#39; + (text: $ledtradar) + &#39;&quot; max=&quot;5&quot;&gt;&lt;/progress&gt;&#39;)]
+
+  |==|
+Det stämmer!
+
+[[Nästa fråga|11]]</tw-passagedata><tw-passagedata pid="2" name="10c" tags="" position="625,2350" size="100,100">(set: $health to it +1)
+|=
+&#39;&#39;Felaktiga svar&#39;&#39;
+(print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
+
+  =|
+ &#39;&#39;Använda ledtrådar&#39;&#39;
+(print: &#39;&lt;progress value=&quot;&#39; + (text: $ledtradar) + &#39;&quot; max=&quot;3&quot;&gt;&lt;/progress&gt;&#39;)
+
+  |==|
+  (if: $health &gt;9)
+[
+Ni har svarat fel för många gånger, och behöver svara på en extrafråga innan ni kan fortsätta
+
+[[Gå till extrafrågan|Extrafråga]]]
+
+  (else-if: $straff10 is true)[
+
+Det stämde inte riktigt. 
+
+[[Försök igen|10]]]
+
+(else:)[
+
+Det stämde inte riktigt. 
+
+[[Gå vidare|10d]]]</tw-passagedata><tw-passagedata pid="3" name="10d" tags="" position="775,2350" size="100,100">(set: $frageid to 100)
+(set: $straff10 to true)
+|=
+&#39;&#39;Felaktiga svar&#39;&#39;
+(print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
+
+  =|
+ &#39;&#39;Använda ledtrådar&#39;&#39;
+(print: &#39;&lt;progress value=&quot;&#39; + (text: $ledtradar) + &#39;&quot; max=&quot;3&quot;&gt;&lt;/progress&gt;&#39;)
+
+  |==|
+(if: $health &gt;9)
+[
+Ni har svarat fel för många gånger, och behöver svara på en extrafråga innan ni kan fortsätta
+
+[[Gå till extrafrågan|Extrafråga]]]
+(else:)[
+Vetenskapliga artiklar kan återfinnas i databaser. Hur många databaser har KTH inom ämnet “Miljö och energi”? 
+
+Antalet databaser är  (input: bind $databaser)
+
+[[Gå vidare|10e]]]</tw-passagedata><tw-passagedata pid="4" name="1" tags="" position="525,25" size="100,100">&#39;&#39;Välkommen till KTH Library Challenge!&#39;&#39;
 
 För att ta er igenom detta spel behöver ni svara på ett antal frågor.  
  
@@ -39,7 +97,7 @@ Bibliotekets webbsida är en bra utgångspunkt för att besvara de flesta av fr�
 
 &lt;img src=&quot;bilder/IMG_0268.jpg&quot; &gt;
 
-[[Gå vidare|1b]]</tw-passagedata><tw-passagedata pid="2" name="1a" tags="" position="500,475" size="100,100">|=
+[[Gå vidare|1b]]</tw-passagedata><tw-passagedata pid="5" name="1a" tags="" position="500,475" size="100,100">|=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
 
@@ -52,7 +110,7 @@ Bibliotekets webbsida är en bra utgångspunkt för att besvara de flesta av fr�
 
 Er grupp ska göra ett projektarbete. Det finns förslag på litteratur, men ni ska också söka fram egen litteratur, både böcker och artiklar. Temat för projektet är hållbar utveckling.
 
-[[Nu kommer första frågan|2]]</tw-passagedata><tw-passagedata pid="3" name="2" tags="" position="500,600" size="100,100">  (set: $frageid to 2)
+[[Nu kommer första frågan|2]]</tw-passagedata><tw-passagedata pid="6" name="2" tags="" position="500,600" size="100,100">  (set: $frageid to 2)
 =|=
 [&#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)]
@@ -78,7 +136,7 @@ I &quot;böcker&quot; räknar vi in både tryckta och elektroniska/digitala böc
   [[0-1000|2a]]
   [[1001-2000|2b]]
   [[2001-3000|2b]]
-  [[3001-4000|2b]]]</tw-passagedata><tw-passagedata pid="4" name="2a" tags="" position="700,625" size="100,100">|=
+  [[3001-4000|2b]]]</tw-passagedata><tw-passagedata pid="7" name="2a" tags="" position="700,625" size="100,100">|=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
 
@@ -90,7 +148,7 @@ I &quot;böcker&quot; räknar vi in både tryckta och elektroniska/digitala böc
 
 Ja, det stämmer!
 
-[[Nästa fråga|3]]</tw-passagedata><tw-passagedata pid="5" name="2b" tags="" position="675,475" size="100,100">(set: $health to it +1)
+[[Nästa fråga|3]]</tw-passagedata><tw-passagedata pid="8" name="2b" tags="" position="675,475" size="100,100">(set: $health to it +1)
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
@@ -115,7 +173,7 @@ Nej, det är tyvärr fel svar. Har ni skrivit in rätt sökord och begränsat s�
 (else:)[
 Nej, det är tyvärr fel svar. 
 
-[[Gå vidare|2d]]]</tw-passagedata><tw-passagedata pid="6" name="2c" tags="" position="375,600" size="100,100">(set: $ledtradar to it +1)
+[[Gå vidare|2d]]]</tw-passagedata><tw-passagedata pid="9" name="2c" tags="" position="375,600" size="100,100">(set: $ledtradar to it +1)
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
@@ -128,7 +186,7 @@ Nej, det är tyvärr fel svar.
   
 Oftast fungerar det bra att helt enkelt skriva in sökord i bibliotekets söktjänst Primo, i det här fallet &#39;&#39;hållbar utveckling&#39;&#39;. I söktjänsten hittar ni alla typer av litteratur som biblioteket har i sina samlingar: böcker, artiklar, rapporter med mera. För att avgränsa till böcker kan ni välja filtret Böcker/e-böcker.
   
-  [[Tillbaka till frågan|2]]</tw-passagedata><tw-passagedata pid="7" name="3" tags="" position="500,725" size="100,100">  (set: $frageid to 3)
+  [[Tillbaka till frågan|2]]</tw-passagedata><tw-passagedata pid="10" name="3" tags="" position="500,725" size="100,100">  (set: $frageid to 3)
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
@@ -151,7 +209,7 @@ Ni kollar på det sökresultat ni fått i bibliotekets söktjänst Primo.  Tyvä
 [[0-3000 |3b]]
 [[3001-6000 |3b]]
 [[6001-10000 |3a]]
-[[10001- |3b]]]</tw-passagedata><tw-passagedata pid="8" name="3a" tags="" position="500,850" size="100,100">|=
+[[10001- |3b]]]</tw-passagedata><tw-passagedata pid="11" name="3a" tags="" position="500,850" size="100,100">|=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
 
@@ -162,7 +220,7 @@ Ni kollar på det sökresultat ni fått i bibliotekets söktjänst Primo.  Tyvä
   |==|
   Bra gjort, det var rätt!
 
-[[Nästa fråga|5]]</tw-passagedata><tw-passagedata pid="9" name="3b" tags="" position="650,750" size="100,100">(set: $health to it +1)
+[[Nästa fråga|5]]</tw-passagedata><tw-passagedata pid="12" name="3b" tags="" position="650,750" size="100,100">(set: $health to it +1)
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
@@ -174,7 +232,7 @@ Ni kollar på det sökresultat ni fått i bibliotekets söktjänst Primo.  Tyvä
   |==| 
  Nej, det är tyvärr fel svar. Har ni skrivit in rätt sökord och begränsat sökningen till böcker/e-böcker och utgivningsår 2020 och framåt?
 
-[[Försök igen|3]]</tw-passagedata><tw-passagedata pid="10" name="3c" tags="" position="375,725" size="100,100">(set: $ledtradar to it +1)
+[[Försök igen|3]]</tw-passagedata><tw-passagedata pid="13" name="3c" tags="" position="375,725" size="100,100">(set: $ledtradar to it +1)
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
@@ -191,7 +249,7 @@ Det finns olika tillvägagångssätt för att översätta termer från svenska t
 * Använd &lt;a href=&quot;https://kth-ch.primo.exlibrisgroup.com/discovery/dbsearch?query=contains,dbcategory,&amp;tab=jsearch_slot&amp;sortby=title&amp;vid=46KTH_INST:46KTH_VU1_L&amp;lang=sv&amp;offset=0&amp;databases=category,Databases%20by%20type%E2%94%80Dictionaries
 &quot; target=&quot;_blank&quot;&gt;lexikon och ordböcker&lt;/a&gt; du har tillgång till via Biblioteket, till exempel NE och Norstedts ordböcker. 
 
- [[Tillbaka till frågan|3]]</tw-passagedata><tw-passagedata pid="11" name="5" tags="" position="500,975" size="100,100">(set: $frageid to 5)
+ [[Tillbaka till frågan|3]]</tw-passagedata><tw-passagedata pid="14" name="5" tags="" position="500,975" size="100,100">(set: $frageid to 5)
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
@@ -213,7 +271,7 @@ Biblioteket är öppet
 från: (input: bind $fran)
 till: (input: bind $till)
 
-[[Gå vidare|5a]]]</tw-passagedata><tw-passagedata pid="12" name="5a" tags="" position="500,1100" size="100,100">|=
+[[Gå vidare|5a]]]</tw-passagedata><tw-passagedata pid="15" name="5a" tags="" position="500,1100" size="100,100">|=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
 
@@ -234,7 +292,7 @@ $fran-$till är rätt! Vad bra att biblioteket är öppet.
 
 $fran-$till är tyvärr fel! 
 
-[[ Försök igen|5]]]</tw-passagedata><tw-passagedata pid="13" name="6" tags="" position="500,1475" size="100,100">(set: $frageid to 6)
+[[ Försök igen|5]]]</tw-passagedata><tw-passagedata pid="16" name="6" tags="" position="500,1475" size="100,100">(set: $frageid to 6)
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
@@ -258,7 +316,7 @@ Ni vill låna boken Fundamentals of sustainable development av Niko Roorda från
 
 Svar: (input: bind $rum)
 
-[[Gå vidare|6a]]]</tw-passagedata><tw-passagedata pid="14" name="6a" tags="" position="500,1575" size="100,100">(set: $rum to (lowercase: $rum))
+[[Gå vidare|6a]]]</tw-passagedata><tw-passagedata pid="17" name="6a" tags="" position="500,1575" size="100,100">(set: $rum to (lowercase: $rum))
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
@@ -279,7 +337,7 @@ $rum är rätt!
 
 $rum är tyvärr fel! Har ni skrivit in &#39;&#39;vilket rum&#39;&#39; boken står i? 
 
-[[ Försök igen|6]]]</tw-passagedata><tw-passagedata pid="15" name="6b" tags="" position="375,1450" size="100,100">(set: $ledtradar to it +1)
+[[ Försök igen|6]]]</tw-passagedata><tw-passagedata pid="18" name="6b" tags="" position="375,1450" size="100,100">(set: $ledtradar to it +1)
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;20&quot;&gt;&lt;/progress&gt;&#39;)
@@ -295,7 +353,7 @@ $rum är tyvärr fel! Har ni skrivit in &#39;&#39;vilket rum&#39;&#39; boken st�
 
 &lt;img src=&quot;bilder/rum2_1.PNG&quot; &gt;
 
-[[Tillbaka till frågan|6]]</tw-passagedata><tw-passagedata pid="16" name="7" tags="" position="500,1700" size="100,100">(set: $frageid to 7)
+[[Tillbaka till frågan|6]]</tw-passagedata><tw-passagedata pid="19" name="7" tags="" position="500,1700" size="100,100">(set: $frageid to 7)
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
@@ -327,7 +385,7 @@ mellan (input: bind $vanster)
 och: (input: bind $hoger)
 
 
-[[Gå vidare|7a]]]</tw-passagedata><tw-passagedata pid="17" name="7a" tags="" position="500,1850" size="100,100">(set: $vanster to (uppercase: $vanster))
+[[Gå vidare|7a]]]</tw-passagedata><tw-passagedata pid="20" name="7a" tags="" position="500,1850" size="100,100">(set: $vanster to (uppercase: $vanster))
 (set: $hoger to (uppercase: $hoger))
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
@@ -367,7 +425,7 @@ Bibliotekarien tipsar om att e-böcker kan vara ett bra alternativ.
 
 Mellan $vanster och $hoger är tyvärr fel. Har ni skrivit hyllplaceringskoderna korrekt? Behöver ni kanske kolla i [[ledtråden|7b]] hur böckerna ställs upp på biblioteket?
 
-[[ Försök igen|7]]]</tw-passagedata><tw-passagedata pid="18" name="7b" tags="" position="325,1825" size="100,100">(set: $ledtradar to it +1)
+[[ Försök igen|7]]]</tw-passagedata><tw-passagedata pid="21" name="7b" tags="" position="325,1825" size="100,100">(set: $ledtradar to it +1)
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
@@ -385,7 +443,7 @@ Böckerna är märkta med koden och de tre första bokstäverna i uppställnings
 
 &lt;img src=&quot;bilder/exempel_hylluppstallning_redigerad.jpg&quot; &gt;
 
-[[Tillbaka till frågan|7]]</tw-passagedata><tw-passagedata pid="19" name="8" tags="" position="500,1225" size="100,100">(set: $frageid to 8)
+[[Tillbaka till frågan|7]]</tw-passagedata><tw-passagedata pid="22" name="8" tags="" position="500,1225" size="100,100">(set: $frageid to 8)
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
@@ -408,9 +466,7 @@ En person i er grupp har en läsnedsättning och behöver lyssna på boken. Hur 
 
 Svar: (input: bind $svar)
 
-[[Gå vidare|8a]]]</tw-passagedata><tw-passagedata pid="20" name="8a" tags="" position="500,1350" size="100,100">(set: $svar to (lowercase: $svar))
-
-print $svar
+[[Gå vidare|8a]]]</tw-passagedata><tw-passagedata pid="23" name="8a" tags="" position="500,1350" size="100,100">(set: $svar to (lowercase: $svar))
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
@@ -425,11 +481,10 @@ Det är rätt, personen ska boka talboksintroduktion.
 
 [[ Gå vidare|6]]]
 
-(else-if: $svar contains &quot;talboks introduktion&quot;)[
+(else-if: $svar contains &quot;introduktion&quot;)[
 Det är rätt, personen ska boka talboksintroduktion
 
 [[ Gå vidare|6]]]
-
 
 (else-if: $straff8 is true)[
 (set: $health to it +1)
@@ -442,7 +497,7 @@ $svar är tyvärr fel!
 
 $svar är tyvärr fel! 
 
-[[ Gå vidare|8c]]]</tw-passagedata><tw-passagedata pid="21" name="8b" tags="" position="375,1225" size="100,100">(set: $ledtradar to it +1)
+[[ Gå vidare|8c]]]</tw-passagedata><tw-passagedata pid="24" name="8b" tags="" position="375,1225" size="100,100">(set: $ledtradar to it +1)
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
@@ -454,7 +509,7 @@ $svar är tyvärr fel!
   |==|
 Flikmenyn på bibliotekets webbsida kan hjälpa er hitta rätt. 
 
-[[Tillbaka till frågan|8]]</tw-passagedata><tw-passagedata pid="22" name="9" tags="" position="500,1975" size="100,100">(set: $frageid to 9)
+[[Tillbaka till frågan|8]]</tw-passagedata><tw-passagedata pid="25" name="9" tags="" position="500,1975" size="100,100">(set: $frageid to 9)
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
@@ -480,7 +535,7 @@ Kapitel 9,  “Sustainable production”, verkar särskilt intressant. Vad heter
 
 Författaren heter (input: bind $forfattare)
 
-[[Gå vidare|9a]]]</tw-passagedata><tw-passagedata pid="23" name="8c" tags="" position="650,1275" size="100,100">(set: $frageid to 80)
+[[Gå vidare|9a]]]</tw-passagedata><tw-passagedata pid="26" name="8c" tags="" position="650,1275" size="100,100">(set: $frageid to 80)
 (set: $straff8 to true)
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
@@ -502,7 +557,7 @@ Alla på KTH har möjlighet att få digital text uppläst genom en talsyntes. Va
 Svar: (input: bind $talsyntes)
 
 [[Gå vidare|8d]]]
- </tw-passagedata><tw-passagedata pid="24" name="8d" tags="" position="925,1225" size="100,100">(set: $talsyntes to (lowercase: $talsyntes))
+ </tw-passagedata><tw-passagedata pid="27" name="8d" tags="" position="925,1225" size="100,100">(set: $talsyntes to (lowercase: $talsyntes))
 
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
@@ -522,7 +577,7 @@ $talsyntes är rätt!
   
 $talsyntes är tyvärr fel! Har ni skrivit namnet på talsyntesen i ett ord, utan mellanslag?
 
-[[ Försök igen|8c]]]</tw-passagedata><tw-passagedata pid="25" name="9a" tags="" position="500,2100" size="100,100">|=
+[[ Försök igen|8c]]]</tw-passagedata><tw-passagedata pid="28" name="9a" tags="" position="500,2100" size="100,100">|=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
 
@@ -547,7 +602,7 @@ Det stämmer att $forfattare skrivit kapitlet.
 
 Nej, $forfattare är tyvärr inte rätt författare. Har ni skrivit författarens namn som man brukar skriva namn, alltså med stor första bokstav i både för- och efternamn?
 
-[[ Försök igen|9]]]</tw-passagedata><tw-passagedata pid="26" name="10" tags="" position="500,2225" size="100,100">(set: $frageid to 10)
+[[ Försök igen|9]]]</tw-passagedata><tw-passagedata pid="29" name="10" tags="" position="500,2225" size="100,100">(set: $frageid to 10)
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
@@ -557,14 +612,12 @@ Nej, $forfattare är tyvärr inte rätt författare. Har ni skrivit författaren
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $ledtradar) + &#39;&quot; max=&quot;3&quot;&gt;&lt;/progress&gt;&#39;)]
 
   |==|
-  
   (if: $health &gt;9)
 [
 Ni har svarat fel för många gånger, och behöver svara på en extrafråga innan ni kan fortsätta
 
 [[Gå till extrafrågan|Extrafråga]]]
 (else:)[
-
 Utöver boken behöver ni hitta två vetenskapliga artiklar. Ibland kan det vara svårt att avgöra om det man hittat är vetenskapligt eller inte. Vad är det för publikationstyp ni ser på bilden? 
 
 &lt;img src=&quot;bilder/fraga_10.JPG&quot; &gt;
@@ -582,7 +635,7 @@ Publikationen på bilden är:
 
 [[en populärvetenskaplig artikel|10c]]
 
-[[en doktorsavhandling|10c]]]</tw-passagedata><tw-passagedata pid="27" name="9b" tags="" position="325,2100" size="100,100">(set: $ledtradar to it +1)
+[[en doktorsavhandling|10c]]]</tw-passagedata><tw-passagedata pid="30" name="9b" tags="" position="325,2100" size="100,100">(set: $ledtradar to it +1)
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
@@ -598,44 +651,7 @@ Om du använder Eduroam eller en av KTH:s studentdatorer kommer du åt materiale
 
 Ibland kan det också fungera att söka efter ett visst kapitel i bibliotekets söktjänst Primo och på så sätt komma direkt till kapitlet.
 
-[[Tillbaka till frågan|9]]</tw-passagedata><tw-passagedata pid="28" name="10a" tags="" position="500,2350" size="100,100">|=
-&#39;&#39;Felaktiga svar&#39;&#39;
-(print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
-
-  =|
- [&#39;&#39;Använda ledtrådar&#39;&#39;
-(print: &#39;&lt;progress value=&quot;&#39; + (text: $ledtradar) + &#39;&quot; max=&quot;5&quot;&gt;&lt;/progress&gt;&#39;)]
-
-  |==|
-Det stämmer!
-
-[[Nästa fråga|11]]</tw-passagedata><tw-passagedata pid="29" name="10c" tags="" position="625,2350" size="100,100">(set: $health to it +1)
-|=
-&#39;&#39;Felaktiga svar&#39;&#39;
-(print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
-
-  =|
- &#39;&#39;Använda ledtrådar&#39;&#39;
-(print: &#39;&lt;progress value=&quot;&#39; + (text: $ledtradar) + &#39;&quot; max=&quot;3&quot;&gt;&lt;/progress&gt;&#39;)
-
-  |==|
-  (if: $health &gt;9)
-[
-Ni har svarat fel för många gånger, och behöver svara på en extrafråga innan ni kan fortsätta
-
-[[Gå till extrafrågan|Extrafråga]]]
-
-  (else-if: $straff10 is true)[
-
-Det stämde inte riktigt. 
-
-[[Försök igen|10]]]
-
-(else:)[
-
-Det stämde inte riktigt. 
-
-[[Gå vidare|10d]]]</tw-passagedata><tw-passagedata pid="30" name="11" tags="" position="500,2475" size="100,100">(set: $frageid to 11)
+[[Tillbaka till frågan|9]]</tw-passagedata><tw-passagedata pid="31" name="11" tags="" position="500,2475" size="100,100">(set: $frageid to 11)
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
@@ -657,28 +673,7 @@ Ni inser att “sustainable development” kan ha olika betydelser inom olika ä
 Klistra in definitionen här:
 (input: bind $definition)
 
-[[Fortsätt|11a]]]</tw-passagedata><tw-passagedata pid="31" name="10d" tags="" position="775,2350" size="100,100">(set: $frageid to 100)
-(set: $straff10 to true)
-|=
-&#39;&#39;Felaktiga svar&#39;&#39;
-(print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
-
-  =|
- &#39;&#39;Använda ledtrådar&#39;&#39;
-(print: &#39;&lt;progress value=&quot;&#39; + (text: $ledtradar) + &#39;&quot; max=&quot;3&quot;&gt;&lt;/progress&gt;&#39;)
-
-  |==|
-(if: $health &gt;9)
-[
-Ni har svarat fel för många gånger, och behöver svara på en extrafråga innan ni kan fortsätta
-
-[[Gå till extrafrågan|Extrafråga]]]
-(else:)[
-Vetenskapliga artiklar kan återfinnas i databaser. Hur många databaser har KTH inom ämnet “Miljö och energi”? 
-
-Antalet databaser är  (input: bind $databaser)
-
-[[Gå vidare|10e]]]</tw-passagedata><tw-passagedata pid="32" name="11a" tags="" position="500,2600" size="100,100">|=
+[[Fortsätt|11a]]]</tw-passagedata><tw-passagedata pid="32" name="11a" tags="" position="500,2600" size="100,100">|=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
 
@@ -801,7 +796,9 @@ Nej, det här är tyvärr inte en korrekt referens till denna artikel i APA-stil
 </tw-passagedata><tw-passagedata pid="38" name="14" tags="" position="500,3100" size="100,100">Bra jobbat!
 Ni lämnar in projektarbetet i tid och får högsta betyg!
 
-Nu är är spelet slut. Hoppas ni lärt er användbara saker om biblioteket för era framtida studier.</tw-passagedata><tw-passagedata pid="39" name="13b" tags="" position="375,2850" size="100,100">(set: $ledtradar to it +1)
+Nu är är spelet slut. Hoppas ni lärt er användbara saker om biblioteket för era framtida studier.
+
+&lt;img src=&quot;bilder/slutbild.gif&quot; &gt;</tw-passagedata><tw-passagedata pid="39" name="13b" tags="" position="375,2850" size="100,100">(set: $ledtradar to it +1)
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
@@ -949,91 +946,7 @@ Vi kör en liten koll på att ni kan grundläggande sökteknik. Vilken av dessa 
   |==|
 Ja, det var rätt. Nu får ni chansen att svara på den första frågan igen.
 
-[[Ny chans på första frågan|2]]</tw-passagedata><tw-passagedata pid="48" name="Untitled Passage" tags="" position="200,50" size="100,100">&#39;&#39;Felaktiga svar&#39;&#39;
-(set: $health to 0)(print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;20&quot;&gt;&lt;/progress&gt;&#39;)
-
-&#39;&#39;Felaktiga svar-indikator&#39;&#39;
-Genom spelet kommer ni att se en Felaktiga svar-indikator högst upp på sidan. Den blå stapeln visar hur många gånger ni svarat fel. När indikatorn är helt blå kommer ni att vara tvungna att besvara en extrafråga innan ni kan fortsätta. 
-
-[[Gå vidare|A]]</tw-passagedata><tw-passagedata pid="49" name="A" tags="" position="200,175" size="100,100"> [&#39;&#39;Använda ledtrådar&#39;&#39;
-(set: $ledtradar to 0) (print: &#39;&lt;progress value=&quot;&#39; + (text: $ledtradar) + &#39;&quot; max=&quot;5&quot;&gt;&lt;/progress&gt;&#39;)]
-
-&#39;&#39;Ledtrådar&#39;&#39;
-För vissa frågor finns ledtrådar som ni kan läsa innan ni besvarar frågan. Ni får använda max tre ledtrådar. Ni ser hur många ni använt i Ledtrådsindikatorn som också finns högst upp på sidan. 
-
-[[Gå vidare|B]]</tw-passagedata><tw-passagedata pid="50" name="B" tags="" position="200,300" size="100,100">|=
-&#39;&#39;Felaktiga svar&#39;&#39;
-(print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;20&quot;&gt;&lt;/progress&gt;&#39;)
-
-  =|
- [&#39;&#39;Använda ledtrådar&#39;&#39;
-(print: &#39;&lt;progress value=&quot;&#39; + (text: $ledtradar) + &#39;&quot; max=&quot;5&quot;&gt;&lt;/progress&gt;&#39;)]
-
-  |==|
-  &#39;&#39;Scenario &#39;&#39;
-
-Er grupp ska göra ett projektarbete. Det finns förslag på litteratur, men ni ska också söka fram egen litteratur, både böcker och artiklar. Temat för projektet är hållbar utveckling.
-
-[[Nu kommer första frågan|C]]</tw-passagedata><tw-passagedata pid="51" name="C" tags="" position="200,425" size="100,100">|=
-&#39;&#39;Felaktiga svar&#39;&#39;
-(print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;20&quot;&gt;&lt;/progress&gt;&#39;)
-
-  =|
- [&#39;&#39;Använda ledtrådar&#39;&#39;
- (print: &#39;&lt;progress value=&quot;&#39; + (text: $ledtradar) + &#39;&quot; max=&quot;5&quot;&gt;&lt;/progress&gt;&#39;)]
-
-  |==|
- I instruktionerna till uppgiften står att ni ska hitta litteratur om hållbar utveckling. Hur många böcker ger en sökning på hållbar utveckling i KTH Bibliotekets söktjänst Primo?
-  
-  Hur söker man i en bibliotekssöktjänst - [[hjälp oss!|D3]]
-  
-  [[0-1000|D1]]
-  [[1001-2000|D2]]
-  [[2001-3000|D2]]
-  [[3001-4000|D2]]</tw-passagedata><tw-passagedata pid="52" name="D1" tags="" position="200,550" size="100,100">Ja, det är rätt.
-
-[[Nästa fråga|E]]</tw-passagedata><tw-passagedata pid="53" name="D2" tags="" position="75,550" size="100,100">(set: $health to it +1)
-
-|=
-&#39;&#39;Felaktiga svar&#39;&#39;
-(print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;20&quot;&gt;&lt;/progress&gt;&#39;)
-
-  =|
- [&#39;&#39;Använda ledtrådar&#39;&#39;
-(print: &#39;&lt;progress value=&quot;&#39; + (text: $ledtradar) + &#39;&quot; max=&quot;5&quot;&gt;&lt;/progress&gt;&#39;)]
-
-  |==|
- 
-Nej, det är tyvärr fel svar. Har ni skrivit in rätt sökord och begränsat sökningen till böcker/e-böcker?
-
-[[Försök igen|C]]
-
-</tw-passagedata><tw-passagedata pid="54" name="D3" tags="" position="25,400" size="100,100">(set: $ledtradar to it +1)
-
-sök ordentligt, inget fusk!
-
-[[Tillbaka till frågan|C]]</tw-passagedata><tw-passagedata pid="55" name="E" tags="" position="200,675" size="100,100">Vad är 2+2?
-Svar
-(if:$ledtradar &lt; 5)[[[Ge mig en ledtråd|E1]]]
-
-(else:) [ Kom igen ]
-
-[[Gå vidare|F]]
-
-</tw-passagedata><tw-passagedata pid="56" name="F" tags="" position="200,800" size="100,100">(if:$health &lt; 20)[Frågan]]
-
-(else:) [ Krånglig extrafråga]
-
-[[Gå vidare|F]]</tw-passagedata><tw-passagedata pid="57" name="E1" tags="" position="75,800" size="100,100"></tw-passagedata><tw-passagedata pid="58" name="Untitled Passage 1" tags="" position="1300,175" size="100,100">set $frageid to x
-if $health = 0 [[[extrafråga]]]</tw-passagedata><tw-passagedata pid="59" name="[extrafråga" tags="" position="1200,650" size="100,100">Frågan
-
-if rätt svar set health to x
-
-(if $frageid = 1) [[länk till 1]
-
-[else-if $frageid = 2) [[länk till 2]
-
-else - fel svar försök igen</tw-passagedata><tw-passagedata pid="60" name="Extrafråga" tags="" position="625,2975" size="100,100">För att återställa antalet felaktiga svar och kunna fortsätta behöver ni svara på en extrafråga.
+[[Ny chans på första frågan|2]]</tw-passagedata><tw-passagedata pid="48" name="Extrafråga" tags="" position="625,2975" size="100,100">För att återställa antalet felaktiga svar och kunna fortsätta behöver ni svara på en extrafråga.
 
 När man sitter och pluggar länge kan man behöva äta och dricka något för att få ny energi. Vilka regler gäller i biblioteket? 
 
@@ -1042,7 +955,7 @@ Lägg &lt;a href=https://jigex.com/dzMpR target=&quot;_blank&quot;&gt;detta puss
 
 (input: bind $extrafraga) 
 
-[[Gå vidare|Extrafraga1]]</tw-passagedata><tw-passagedata pid="61" name="Extrafraga1" tags="" position="625,3100" size="100,100">(set: $extrafraga to (lowercase: $extrafraga))
+[[Gå vidare|Extrafraga1]]</tw-passagedata><tw-passagedata pid="49" name="Extrafraga1" tags="" position="625,3100" size="100,100">(set: $extrafraga to (lowercase: $extrafraga))
 (if: $extrafraga contains &quot;ingen mat&quot; and $extrafraga contains &quot;snacks ok&quot; and $extrafraga contains &quot;dryck med lock ok&quot;)[
 (set: $health to 0)
 
@@ -1054,62 +967,38 @@ Ja, det var rätt.
  
  Nej, det var tyvärr fel. Tänk på att skriva texterna precis på det sätt som de står på bilden.
   
-[[Försök igen|Extrafråga]]]</tw-passagedata><tw-passagedata pid="62" name="klarextrafraga" tags="" position="625,3225" size="100,100">Nu är de felaktiga svaren nollställda och ni kan fortsätta.
+[[Försök igen|Extrafråga]]]</tw-passagedata><tw-passagedata pid="50" name="klarextrafraga" tags="" position="625,3225" size="100,100">Nu är de felaktiga svaren nollställda och ni kan fortsätta.
 
 (if: $frageid is 2)
-
 [[[Tillbaka till de ordinarie frågorna|2]]]
 (else-if: $frageid is 20)
-
 [[[Tillbaka till de ordinarie frågorna|2d]]]
 (else-if: $frageid is 3)
-
 [[[Tillbaka till de ordinarie frågorna|3]]]
 (else-if: $frageid is 5)
-
 [[[Tillbaka till de ordinarie frågorna|5]]]
 (else-if: $frageid is 6)
-
 [[[Tillbaka till de ordinarie frågorna|6]]]
 (else-if: $frageid is 8)
-
 [[[Tillbaka till de ordinarie frågorna|8]]]
 (else-if: $frageid is 80)
-
 [[[Tillbaka till de ordinarie frågorna|8c]]]
 (else-if: $frageid is 7)
-
 [[[Tillbaka till de ordinarie frågorna|7]]]
 (else-if: $frageid is 9)
-
 [[[Tillbaka till de ordinarie frågorna|9]]]
 (else-if: $frageid is 10)
-
 [[[Tillbaka till de ordinarie frågorna|10]]]
 (else-if: $frageid is 100)
-
 [[[Tillbaka till de ordinarie frågorna|10d]]]
 (else-if: $frageid is 11)
-
 [[[Tillbaka till de ordinarie frågorna|11]]]
 (else-if: $frageid is 12)
-
 [[[Tillbaka till de ordinarie frågorna|12]]]
 (else-if: $frageid is 120)
-
 [[[Tillbaka till de ordinarie frågorna|12b]]]
 (else-if: $frageid is 13)
-
-[[[Tillbaka till de ordinarie frågorna|13]]]</tw-passagedata><tw-passagedata pid="63" name="Untitled Passage 2" tags="" position="925,1600" size="100,100">
-=|=
-Felaktiga svar
-=|=
-Ledtrådar
-|==|
-
-
-=|=
-Vanligt text. Under perioden 2025–2027 kommer biblioteket att genomgå en renovering i etapper. Målet är att skapa ett bibliotek som ännu bättre svarar mot användarnas behov – en modern, flexibel och inspirerande plats för lärande, forskning och möten.</tw-passagedata></tw-storydata>
+[[[Tillbaka till de ordinarie frågorna|13]]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
