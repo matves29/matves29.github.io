@@ -721,7 +721,7 @@ Ni har svarat fel för många gånger, och behöver svara på en extrafråga inn
 
 [[Gå till extrafrågan|Extrafråga]]]
 (else:)[
-Härligt, nu har ni allt material och det är dags att skriva! Ni vill sitta tillsammans i ett grupprum i biblioteket, men hur många timmar per vecka får man boka per person?
+Härligt, nu har ni material och det är dags att skriva! Ni vill sitta tillsammans i ett grupprum i biblioteket, men hur många timmar per vecka får man boka per person? Skriva svaret med siffror.
 (input: bind $timmar)
 
 [[Gå vidare|12a]]]</tw-passagedata><tw-passagedata pid="35" name="10e" tags="" position="950,2350" size="100,100">|=
@@ -782,7 +782,7 @@ Ni har fått en lista med förslag på litteratur ni kan använda. Skriv en korr
 
 Precis så ska referensen se ut. Snyggt jobbat!
 
-[[ Gå vidare|14]]]
+[[ Gå vidare|15]]]
 
 (else:)[
 (set: $health to it +1)
@@ -793,7 +793,7 @@ Nej, det här är tyvärr inte en korrekt referens till denna artikel i APA-stil
 
 [[ Försök igen|13]]]
 
-</tw-passagedata><tw-passagedata pid="38" name="14" tags="" position="500,3100" size="100,100">Bra jobbat!
+</tw-passagedata><tw-passagedata pid="38" name="14" tags="" position="500,3100" size="100,100">Pausen med snacks och dryck gjorde susen.
 Ni lämnar in projektarbetet i tid och får högsta betyg!
 
 Nu är är spelet slut. Hoppas ni lärt er användbara saker om biblioteket för era framtida studier.
@@ -948,15 +948,16 @@ Ja, det var rätt. Nu får ni chansen att svara på den första frågan igen.
 
 [[Ny chans på första frågan|2]]</tw-passagedata><tw-passagedata pid="48" name="Extrafråga" tags="" position="625,2975" size="100,100">För att återställa antalet felaktiga svar och kunna fortsätta behöver ni svara på en extrafråga.
 
-När man sitter och pluggar länge kan man behöva äta och dricka något för att få ny energi. Vilka regler gäller i biblioteket? 
+Här kommer ett råd till er skrivet som ett chiffer. 
 
-Lägg &lt;a href=https://jigex.com/dzMpR target=&quot;_blank&quot;&gt;detta pussel&lt;/a&gt; och skriv in den svenska text ni ser på bilden.
+&lt;img src=&quot;bilder/chiffer.jpg&quot; &gt;
 
+Någon har hjälpt er lite och börjat lösa det. Lös hela chiffret och skriv in texten här:
 
 (input: bind $extrafraga) 
 
 [[Gå vidare|Extrafraga1]]</tw-passagedata><tw-passagedata pid="49" name="Extrafraga1" tags="" position="625,3100" size="100,100">(set: $extrafraga to (lowercase: $extrafraga))
-(if: $extrafraga contains &quot;ingen mat&quot; and $extrafraga contains &quot;snacks ok&quot; and $extrafraga contains &quot;dryck med lock ok&quot;)[
+(if: $extrafraga contains &quot;kolla upp svaren&quot; and &quot;$extrafraga contains &quot;chansa inte&quot;)[
 (set: $health to 0)
 
 Ja, det var rätt. 
@@ -965,7 +966,7 @@ Ja, det var rätt.
 
 (else:)[
  
- Nej, det var tyvärr fel. Tänk på att skriva texterna precis på det sätt som de står på bilden.
+Nej, det var tyvärr fel. Har ni löst chiffret? Varje bokstav i alfabetet motsvaras av en siffra och om ni kollar på de siffror som redan är översatta till bokstäver borde ni förstå mönstret.
   
 [[Försök igen|Extrafråga]]]</tw-passagedata><tw-passagedata pid="50" name="klarextrafraga" tags="" position="625,3225" size="100,100">Nu är de felaktiga svaren nollställda och ni kan fortsätta.
 
@@ -998,7 +999,98 @@ Ja, det var rätt.
 (else-if: $frageid is 120)
 [[[Tillbaka till de ordinarie frågorna|12b]]]
 (else-if: $frageid is 13)
-[[[Tillbaka till de ordinarie frågorna|13]]]</tw-passagedata></tw-storydata>
+[[[Tillbaka till de ordinarie frågorna|13]]]
+(else-if: $frageid is 15)
+[[[Tillbaka till de ordinarie frågorna|15]]]
+(else-if: $frageid is 16)
+[[[Tillbaka till de ordinarie frågorna|16]]]</tw-passagedata><tw-passagedata pid="51" name="15" tags="" position="375,3100" size="100,100">(set: $frageid to 12)
+|=
+&#39;&#39;Felaktiga svar&#39;&#39;
+(print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
+
+  =|
+ [&#39;&#39;Använda ledtrådar&#39;&#39;
+(print: &#39;&lt;progress value=&quot;&#39; + (text: $ledtradar) + &#39;&quot; max=&quot;5&quot;&gt;&lt;/progress&gt;&#39;)]
+
+  |==|
+  (if: $health &gt;9)
+[
+Ni har svarat fel för många gånger, och behöver svara på en extrafråga innan ni kan fortsätta
+
+[[Gå till extrafrågan|Extrafråga]]]
+(else:)[
+Ni vill använda ett diagram ni hittat i en vetenskaplig artikel, men information om vad de olika färgerna i diagrammet står för har fallit bort. Som tur är har ni sparat referensen och kan söka upp artikeln igen. Bilden är hämtad ur denna artikel:
+
+Tan, L., Yang, Z., Irfan, M., Ding, C. J., Hu, M., &amp; Hu, J. (2024). Toward low‐carbon sustainable development: Exploring the impact of digital economy development and industrial restructuring. Business Strategy and the Environment, 33(3), 2159–2172. 
+
+&lt;img src=&quot;bilder/bild.PNG&quot; &gt;
+
+Vad står det gröna i diagrammet för?
+(input: bind $gron)
+
+[[Gå vidare|15a]]]</tw-passagedata><tw-passagedata pid="52" name="15a" tags="" position="375,3225" size="100,100">(set: $gron to (lowercase: $gron))
+|=
+&#39;&#39;Felaktiga svar&#39;&#39;
+(print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
+
+  =|
+ &#39;&#39;Använda ledtrådar&#39;&#39;
+(print: &#39;&lt;progress value=&quot;&#39; + (text: $ledtradar) + &#39;&quot; max=&quot;3&quot;&gt;&lt;/progress&gt;&#39;)
+  |==|
+(if: $gron is &quot;digital inclusive financial index&quot;)[
+
+$gron är rätt!
+
+[[ Gå vidare|16]]]
+(else:)[
+(set: $health to it +1)
+|=
+
+$gron är tyvärr fel! Har ni sökt fram artikeln och hittat rätt bild?
+
+[[ Försök igen|15]]]</tw-passagedata><tw-passagedata pid="53" name="16" tags="" position="375,3350" size="100,100">(set: $frageid to 16)
+|=
+&#39;&#39;Felaktiga svar&#39;&#39;
+(print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
+
+  =|
+ [&#39;&#39;Använda ledtrådar&#39;&#39;
+(print: &#39;&lt;progress value=&quot;&#39; + (text: $ledtradar) + &#39;&quot; max=&quot;5&quot;&gt;&lt;/progress&gt;&#39;)]
+
+  |==|
+  (if: $health &gt;9)
+[
+Ni har svarat fel för många gånger, och behöver svara på en extrafråga innan ni kan fortsätta
+
+[[Gå till extrafrågan|Extrafråga]]]
+(else:)[
+Nu är ni nästan klara! Men ni har suttit och pluggat längeo och behöver äta och dricka något för att få ny energi. Vilka regler gäller i biblioteket? 
+
+Lägg &lt;a href=https://jigex.com/dzMpR target=&quot;_blank&quot;&gt;detta pussel&lt;/a&gt; och skriv in den svenska text ni ser på bilden.
+
+(input: bind $regler) 
+
+[[Gå vidare|16a]]]</tw-passagedata><tw-passagedata pid="54" name="16a" tags="" position="375,3475" size="100,100">(set: $regler to (lowercase: $regler))
+|=
+&#39;&#39;Felaktiga svar&#39;&#39;
+(print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
+
+  =|
+ [&#39;&#39;Använda ledtrådar&#39;&#39;
+(print: &#39;&lt;progress value=&quot;&#39; + (text: $ledtradar) + &#39;&quot; max=&quot;5&quot;&gt;&lt;/progress&gt;&#39;)]
+
+  |==|
+(if: $regler contains &quot;ingen mat&quot; and $regler contains &quot;snacks ok&quot; and $regler contains &quot;dryck med lock ok&quot;)[
+(set: $health to 0)
+
+Ja, det var rätt. 
+[[Gå vidare|14]]]
+
+(else:)[
+ 
+ Nej, det var tyvärr fel. Tänk på att skriva texterna precis på det sätt som de står på bilden.
+  
+[[Försök igen|16]]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
