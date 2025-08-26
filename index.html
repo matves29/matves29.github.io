@@ -793,7 +793,7 @@ Nej, det här är tyvärr inte en korrekt referens till denna artikel i APA-stil
 
 [[ Försök igen|13]]]
 
-</tw-passagedata><tw-passagedata pid="38" name="14" tags="" position="500,3100" size="100,100">Pausen med snacks och dryck gjorde susen.
+</tw-passagedata><tw-passagedata pid="38" name="14" tags="" position="475,3400" size="100,100">Pausen med snacks och dryck gjorde susen.
 Ni lämnar in projektarbetet i tid och får högsta betyg!
 
 Nu är är spelet slut. Hoppas ni lärt er användbara saker om biblioteket för era framtida studier.
@@ -946,7 +946,7 @@ Vi kör en liten koll på att ni kan grundläggande sökteknik. Vilken av dessa 
   |==|
 Ja, det var rätt. Nu får ni chansen att svara på den första frågan igen.
 
-[[Ny chans på första frågan|2]]</tw-passagedata><tw-passagedata pid="48" name="Extrafråga" tags="" position="625,2975" size="100,100">För att återställa antalet felaktiga svar och kunna fortsätta behöver ni svara på en extrafråga.
+[[Ny chans på första frågan|2]]</tw-passagedata><tw-passagedata pid="48" name="Extrafråga" tags="" position="1025,3075" size="100,100">För att återställa antalet felaktiga svar och kunna fortsätta behöver ni svara på en extrafråga.
 
 Här kommer ett råd till er skrivet som ett chiffer. 
 
@@ -956,8 +956,8 @@ Någon har hjälpt er lite och börjat lösa det. Lös hela chiffret och skriv i
 
 (input: bind $extrafraga) 
 
-[[Gå vidare|Extrafraga1]]</tw-passagedata><tw-passagedata pid="49" name="Extrafraga1" tags="" position="625,3100" size="100,100">(set: $extrafraga to (lowercase: $extrafraga))
-(if: $extrafraga contains &quot;kolla upp svaren&quot; and &quot;$extrafraga contains &quot;chansa inte&quot;)[
+[[Gå vidare|Extrafraga1]]</tw-passagedata><tw-passagedata pid="49" name="Extrafraga1" tags="" position="1025,3225" size="100,100">(set: $extrafraga to (lowercase: $extrafraga))
+(if: $extrafraga contains &quot;kolla upp svaren&quot; and $extrafraga contains &quot;chansa inte&quot;)[
 (set: $health to 0)
 
 Ja, det var rätt. 
@@ -968,7 +968,7 @@ Ja, det var rätt.
  
 Nej, det var tyvärr fel. Har ni löst chiffret? Varje bokstav i alfabetet motsvaras av en siffra och om ni kollar på de siffror som redan är översatta till bokstäver borde ni förstå mönstret.
   
-[[Försök igen|Extrafråga]]]</tw-passagedata><tw-passagedata pid="50" name="klarextrafraga" tags="" position="625,3225" size="100,100">Nu är de felaktiga svaren nollställda och ni kan fortsätta.
+[[Försök igen|Extrafråga]]]</tw-passagedata><tw-passagedata pid="50" name="klarextrafraga" tags="" position="1025,3400" size="100,100">Nu är de felaktiga svaren nollställda och ni kan fortsätta.
 
 (if: $frageid is 2)
 [[[Tillbaka till de ordinarie frågorna|2]]]
@@ -1003,7 +1003,7 @@ Nej, det var tyvärr fel. Har ni löst chiffret? Varje bokstav i alfabetet motsv
 (else-if: $frageid is 15)
 [[[Tillbaka till de ordinarie frågorna|15]]]
 (else-if: $frageid is 16)
-[[[Tillbaka till de ordinarie frågorna|16]]]</tw-passagedata><tw-passagedata pid="51" name="15" tags="" position="375,3100" size="100,100">(set: $frageid to 12)
+[[[Tillbaka till de ordinarie frågorna|16]]]</tw-passagedata><tw-passagedata pid="51" name="15" tags="" position="475,3100" size="100,100">(set: $frageid to 12)
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
@@ -1028,7 +1028,7 @@ Tan, L., Yang, Z., Irfan, M., Ding, C. J., Hu, M., &amp; Hu, J. (2024). Toward l
 Vad står det gröna i diagrammet för?
 (input: bind $gron)
 
-[[Gå vidare|15a]]]</tw-passagedata><tw-passagedata pid="52" name="15a" tags="" position="375,3225" size="100,100">(set: $gron to (lowercase: $gron))
+[[Gå vidare|15a]]]</tw-passagedata><tw-passagedata pid="52" name="15a" tags="" position="600,3125" size="100,100">(set: $gron to (lowercase: $gron))
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
@@ -1048,7 +1048,7 @@ $gron är rätt!
 
 $gron är tyvärr fel! Har ni sökt fram artikeln och hittat rätt bild?
 
-[[ Försök igen|15]]]</tw-passagedata><tw-passagedata pid="53" name="16" tags="" position="375,3350" size="100,100">(set: $frageid to 16)
+[[ Försök igen|15]]]</tw-passagedata><tw-passagedata pid="53" name="16" tags="" position="475,3250" size="100,100">(set: $frageid to 16)
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
@@ -1064,13 +1064,13 @@ Ni har svarat fel för många gånger, och behöver svara på en extrafråga inn
 
 [[Gå till extrafrågan|Extrafråga]]]
 (else:)[
-Nu är ni nästan klara! Men ni har suttit och pluggat längeo och behöver äta och dricka något för att få ny energi. Vilka regler gäller i biblioteket? 
+Nu är ni nästan klara! Men ni har suttit och pluggat länge och behöver äta och dricka något för att få ny energi. Vilka regler gäller i biblioteket? 
 
 Lägg &lt;a href=https://jigex.com/dzMpR target=&quot;_blank&quot;&gt;detta pussel&lt;/a&gt; och skriv in den svenska text ni ser på bilden.
 
 (input: bind $regler) 
 
-[[Gå vidare|16a]]]</tw-passagedata><tw-passagedata pid="54" name="16a" tags="" position="375,3475" size="100,100">(set: $regler to (lowercase: $regler))
+[[Gå vidare|16a]]]</tw-passagedata><tw-passagedata pid="54" name="16a" tags="" position="625,3250" size="100,100">(set: $regler to (lowercase: $regler))
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
