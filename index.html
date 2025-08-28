@@ -552,7 +552,7 @@ Ni har svarat fel för många gånger, och behöver svara på en extrafråga inn
 
 [[Gå till extrafrågan|Extrafråga]]]
 (else:)[
-Alla på KTH har möjlighet att få digital text uppläst genom en talsyntes. Vad heter talsyntesen? ]
+Alla på KTH har möjlighet att få digital text uppläst genom en talsyntes. Vad heter talsyntesen? 
 
 Svar: (input: bind $talsyntes)
 
@@ -742,7 +742,7 @@ $databaser är rätt svar!
   
 $databaser är tyvärr inte rätt. 
 
-[[ Försök igen|10d]]]</tw-passagedata><tw-passagedata pid="36" name="13" tags="" position="500,2850" size="100,100">(set: $fraga13 to true)
+[[ Försök igen|10d]]]</tw-passagedata><tw-passagedata pid="36" name="13" tags="" position="500,2850" size="100,100">(set: $frageid to 13)
 |=
 &#39;&#39;Felaktiga svar&#39;&#39;
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
@@ -793,7 +793,7 @@ Nej, det här är tyvärr inte en korrekt referens till denna artikel i APA-stil
 
 [[ Försök igen|13]]]
 
-</tw-passagedata><tw-passagedata pid="38" name="14" tags="" position="475,3400" size="100,100">Pausen med snacks och dryck gjorde susen.
+</tw-passagedata><tw-passagedata pid="38" name="14" tags="" position="475,3400" size="100,100">Pausen med snacks och dryck med lock gjorde susen.
 Ni lämnar in projektarbetet i tid och får högsta betyg!
 
 Nu är är spelet slut. Hoppas ni lärt er användbara saker om biblioteket för era framtida studier.
@@ -869,8 +869,8 @@ Ni har svarat fel för många gånger, och behöver svara på en extrafråga inn
 (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;10&quot;&gt;&lt;/progress&gt;&#39;)
 
   =|
- [&#39;&#39;Använda ledtrådar&#39;&#39;
-(print: &#39;&lt;progress value=&quot;&#39; + (text: $ledtradar) + &#39;&quot; max=&quot;3&quot;&gt;&lt;/progress&gt;&#39;)]
+ &#39;&#39;Använda ledtrådar&#39;&#39;
+(print: &#39;&lt;progress value=&quot;&#39; + (text: $ledtradar) + &#39;&quot; max=&quot;3&quot;&gt;&lt;/progress&gt;&#39;)
 
   |==|
 Hur många bokningsbara grupprum finns det på biblioteket? 
@@ -1077,17 +1077,15 @@ Lägg &lt;a href=https://jigex.com/dzMpR target=&quot;_blank&quot;&gt;detta puss
 
   =|
  [&#39;&#39;Använda ledtrådar&#39;&#39;
-(print: &#39;&lt;progress value=&quot;&#39; + (text: $ledtradar) + &#39;&quot; max=&quot;5&quot;&gt;&lt;/progress&gt;&#39;)]
+(print: &#39;&lt;progress value=&quot;&#39; + (text: $ledtradar) + &#39;&quot; max=&quot;3&quot;&gt;&lt;/progress&gt;&#39;)]
 
   |==|
 (if: $regler contains &quot;ingen mat&quot; and $regler contains &quot;snacks ok&quot; and $regler contains &quot;dryck med lock ok&quot;)[
-(set: $health to 0)
-
 Ja, det var rätt. 
 [[Gå vidare|14]]]
 
 (else:)[
- 
+ (set: $health to it +1)
  Nej, det var tyvärr fel. Tänk på att skriva texterna precis på det sätt som de står på bilden.
   
 [[Försök igen|16]]]</tw-passagedata></tw-storydata>
